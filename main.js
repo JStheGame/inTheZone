@@ -36,11 +36,16 @@ cvs.addEventListener('mousemove', function(event) {
 
 function drawCircle(x, y, r, colour) {
 	ctx.fillStyle = colour;
-
 	const circle = new Path2D();
 	circle.arc(x, y, r, 0, 2 * Math.PI);
-
 	ctx.fill(circle);
+
+
+	ctx.strokeStyle = "#000";
+	ctx.lineWidth = 6;
+	ctx.beginPath();
+	ctx.arc(x, y, r, 0, 2 * Math.PI);
+	ctx.stroke();
 }
 
 function randCircle(colour) {
@@ -83,7 +88,7 @@ const eachFrame = (function() {
 		score += bonus;
 
 		//draw avatar		
-		drawCircle(avatar.x, avatar.y, avatar.r, "#000");
+		drawCircle(avatar.x, avatar.y, avatar.r, "#fff");
 
 		//put the text on the screen
 		ctx.fillStyle = "white";

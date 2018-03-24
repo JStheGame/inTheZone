@@ -3,3 +3,4 @@ GOALS (for next time):
 - maybe like a game menu (set the difficulty, reset the game)
 - change the shape of our avatar (something more interesting)
 - clean up the code a little bit
+- add a hi score
